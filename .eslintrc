@@ -44,7 +44,18 @@
         "arrowParens": "always"
       }
     ],
-    "import/order": ["warn", {"newlines-between": "always"}],
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "parent"
+          }
+        ]
+      }
+    ],
     "react/prop-types": "off",
     "react/self-closing-comp": "warn",
     "react-hooks/rules-of-hooks": "warn",
