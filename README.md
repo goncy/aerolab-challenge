@@ -18,6 +18,9 @@ El usuario tiene una cantidad definida de puntos y cada producto vale una cantid
 * Cuando el usuario no puede comprar un producto, debería ver cuantos puntos le faltan para poder comprarlo.
 * Un usuario no debería poder comprar un producto del cual no tiene suficientes puntos para comprar.
 * Cuando el usuario compra, la cantidad de puntos debe ser deducida automaticamente de los puntos disponibles.
+* Debe haber una pantalla donde ver el historial de productos canjeados
+* No debo poder comprar un producto mientras cargo puntos o estoy comprando otro producto
+* Debe haber un máximo de 16 productos en pantalla pero debo poder cambiar de página para ver el resto
 
 ## Definiciones técnicas
 * La aplicación debe estar publicada y debe ser accesible mediante un link.
