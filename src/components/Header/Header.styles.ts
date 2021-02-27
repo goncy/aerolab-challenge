@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
-  width: 100vw;
+  width: 100%;
   height: 80px;
   padding: 0 10%;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
 
   display: flex;
   justify-content: space-between;

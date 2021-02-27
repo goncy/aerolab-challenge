@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
+import api from "../../api";
 import HeroImage from "../../assets/header.png";
-import Select from "~/components/Select";
+import Select from "../../components/Select";
+import ProductCard from "../../components/ProductCard";
 
 import {
   HomePageWrapper,
@@ -11,6 +14,7 @@ import {
   Container,
   PaginationInfo,
   Divider,
+  Grid,
 } from "./HomePage.styles";
 
 const options = [
@@ -29,6 +33,23 @@ const options = [
 ];
 
 const HomePage = () => {
+  const [products, setProducts] = useState([]);
+  const [status, setStatus] = useState("pending");
+
+  useEffect(() => {
+    api
+      .getAllProducts()
+      .then((res) => {
+        setProducts(res.data);
+        setStatus("success");
+      })
+      .catch((err) => {
+        setStatus("failed");
+      });
+  }, []);
+
+  console.log(status, products);
+
   return (
     <HomePageWrapper>
       <HeroWrapper>
@@ -43,6 +64,13 @@ const HomePage = () => {
           <Divider />
           <Select options={options} />
         </FilterWrapper>
+      </Container>
+      <Container>
+        <Grid>
+          {status === "success"
+            ? products.map((product) => <ProductCard key={product._id} product={product} />)
+            : null}
+        </Grid>
       </Container>
     </HomePageWrapper>
   );

@@ -55,7 +55,7 @@ export const FilterWrapper = styled.div`
 `;
 
 export const Container = styled.section`
-  margin: 1rem 10vh;
+  margin: 1rem 10vw;
 
   @media only screen and (max-width: 1200px) {
     margin: 1rem;
@@ -79,4 +79,10 @@ export const Divider = styled.div`
   @media only screen and (max-width: 935px) {
     display: none;
   }
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, minmax(275px, 1fr));
+  grid-gap: 20px;
 `;
