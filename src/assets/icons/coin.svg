@@ -1,40 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>money</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <filter x="-9.1%" y="-9.1%" width="128.3%" height="128.3%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="68.6284858%" id="radialGradient-2">
-            <stop stop-color="#FFCF00" offset="0%"></stop>
-            <stop stop-color="#F7AE15" offset="100%"></stop>
-        </radialGradient>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Catalog-pg1" transform="translate(-609.000000, -731.000000)">
-            <g id="products" transform="translate(132.000000, 622.000000)">
-                <g id="line-1">
-                    <g id="product-card-hover" filter="url(#filter-1)" transform="translate(300.000000, 0.000000)">
-                        <g id="money" transform="translate(71.000000, 100.000000)">
-                            <g transform="translate(108.000000, 11.000000)">
-                                <g>
-                                    <circle id="Oval-Copy-3" fill="url(#radialGradient-2)" cx="13" cy="13" r="13"></circle>
-                                    <path d="M13,3.0952381 C7.54580357,3.0952381 3.0952381,7.54657738 3.0952381,13 C3.0952381,18.4541964 7.54657738,22.9047619 13,22.9047619 C18.4541964,22.9047619 22.9047619,18.4534226 22.9047619,13 C22.9047619,7.54580357 18.4534226,3.0952381 13,3.0952381 Z M13,21.7440476 C8.17850893,21.7440476 4.25595238,17.8214911 4.25595238,13 C4.25595238,8.17850893 8.17850893,4.25595238 13,4.25595238 C17.8214911,4.25595238 21.7440476,8.17850893 21.7440476,13 C21.7440476,17.8214911 17.8214911,21.7440476 13,21.7440476 Z" id="Shape" fill="#F8B013" fill-rule="nonzero"></path>
-                                    <path d="M13,5.2962963 C8.76834769,5.2962963 5.2962963,8.76956614 5.2962963,13 C5.2962963,17.2316523 8.76956614,20.7037037 13,20.7037037 C17.2316523,20.7037037 20.7037037,17.2304339 20.7037037,13 C20.7037037,8.76834769 17.2304339,5.2962963 13,5.2962963 Z M13,19.5245654 C9.40233107,19.5245654 6.47543462,16.5976689 6.47543462,13 C6.47543462,9.40233107 9.40233107,6.47543462 13,6.47543462 C16.5976689,6.47543462 19.5245654,9.40233107 19.5245654,13 C19.5245654,16.5976689 16.5976689,19.5245654 13,19.5245654 Z" id="Shape" fill="#F8B013" fill-rule="nonzero"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.7647 23.5294C18.2622 23.5294 23.5294 18.2622 23.5294 11.7647C23.5294 5.26724 18.2622 0 11.7647 0C5.26724 0 0 5.26724 0 11.7647C0 18.2622 5.26724 23.5294 11.7647 23.5294Z" fill="url(#paint0_radial)"/>
+<path d="M11.7647 2.80112C6.82875 2.80112 2.80109 6.82948 2.80109 11.7647C2.80109 16.7006 6.82945 20.7283 11.7647 20.7283C16.7006 20.7283 20.7283 16.6999 20.7283 11.7647C20.7283 6.82878 16.6999 2.80112 11.7647 2.80112ZM11.7647 19.6779C7.40133 19.6779 3.85151 16.128 3.85151 11.7647C3.85151 7.40136 7.40133 3.85154 11.7647 3.85154C16.128 3.85154 19.6778 7.40136 19.6778 11.7647C19.6778 16.128 16.128 19.6779 11.7647 19.6779Z" fill="#F8B013"/>
+<path d="M11.7647 4.79303C7.93516 4.79303 4.79303 7.93626 4.79303 11.7647C4.79303 15.5943 7.93626 18.7364 11.7647 18.7364C15.5943 18.7364 18.7364 15.5932 18.7364 11.7647C18.7364 7.93516 15.5932 4.79303 11.7647 4.79303ZM11.7647 17.6693C8.5089 17.6693 5.86012 15.0205 5.86012 11.7647C5.86012 8.5089 8.5089 5.86012 11.7647 5.86012C15.0205 5.86012 17.6693 8.5089 17.6693 11.7647C17.6693 15.0205 15.0205 17.6693 11.7647 17.6693Z" fill="#F8B013"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11.7647 11.7647) scale(16.1479)">
+<stop stop-color="#FFCF00"/>
+<stop offset="1" stop-color="#F7AE15"/>
+</radialGradient>
+</defs>
 </svg>
