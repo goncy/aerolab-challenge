@@ -21,6 +21,7 @@ export const Option = styled.button`
   border: none;
   font-weight: 600;
   font-size: 16px;
+  outline: none;
   cursor: pointer;
 
   &:hover {
