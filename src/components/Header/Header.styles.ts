@@ -53,19 +53,27 @@ export const LogIn = styled.div`
 `;
 
 export const FullName = styled.span`
-  padding: 0 1rem;
+  padding: ${(props) => (props.loaded ? "0 1rem" : "0")};
+  width: ${(props) => (props.loaded ? "fit-content" : "0")};
+  transition: all 1.8s ease;
 `;
 
 export const PointsWrapper = styled.div`
   height: 100%;
-  width: min-content;
-  padding: 0 1rem;
   background: var(--black);
   font-weight: 500;
-  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: ${(props) => (props.loaded ? "50px" : "48px")};
+  padding: ${(props) => (props.loaded ? "0 1rem" : "0")};
+  width: ${(props) => (props.loaded ? "fit-content" : "48px")};
+  transition: all 0.8s ease;
+
+  & > span {
+    display: ${(props) => (props.loaded ? "block" : "none")};
+  }
 `;
 
 export const Points = styled.span`

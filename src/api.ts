@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import {Product} from "./types";
+import {Product, User} from "./types";
 
 axios.defaults.headers = {
   "Content-Type": "application/json",
@@ -10,6 +10,8 @@ axios.defaults.headers = {
 };
 
 export default {
-  getAllProducts: (): Promise<Product> =>
+  logInUser: (): Promise<{data: User}> =>
+    axios.get("https://coding-challenge-api.aerolab.co/user/me"),
+  getAllProducts: (): Promise<{data: Product}> =>
     axios.get("https://coding-challenge-api.aerolab.co/products"),
 };

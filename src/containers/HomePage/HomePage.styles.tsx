@@ -5,21 +5,19 @@ export const HomePageWrapper = styled.div`
 `;
 
 export const HeroWrapper = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 48vh;
+  margin-bottom: 2rem;
   position: relative;
 
   & > img {
-    height: 45vh;
+    height: 48vh;
     width: 100%;
     object-fit: cover;
     object-position: center right;
   }
 
   @media only screen and (max-width: 480px) {
-    & > img {
-      height: 20vh;
-    }
+    max-height: 20vh;
   }
 `;
 
@@ -61,7 +59,7 @@ export const FilterWrapper = styled.div`
 `;
 
 export const Container = styled.section`
-  margin: 2rem 10vw;
+  margin: 1rem 10vw;
 
   @media only screen and (max-width: 1200px) {
     margin: 1rem;
@@ -92,6 +90,7 @@ export const Grid = styled.div`
 export const PaginationWrapper = styled.div`
   width: 100%;
   padding: 1rem 2rem;
+  margin-bottom: 2rem;
   background: var(--white);
   border: 1px solid #eeeeee;
   border-radius: 6px;

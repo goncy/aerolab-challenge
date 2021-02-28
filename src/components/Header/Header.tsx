@@ -2,6 +2,8 @@ import React from "react";
 
 import AeroLabLogo from "../../assets/logo.svg";
 import CoinIcon from "../../assets/icons/coin.svg";
+import {AuthContext} from "~/context";
+import Loading from "../Loading/Loading";
 
 import {
   HeaderWrapper,
@@ -14,18 +16,18 @@ import {
 } from "./Header.styles";
 
 const Header = () => {
+  const {auth, isAuth} = React.useContext(AuthContext);
+
   return (
     <HeaderWrapper>
       <LogoWrapper>
         <img alt="Aero Lab" src={AeroLabLogo} />
       </LogoWrapper>
       <LogIn>
-        <FullName>John Kite</FullName>
-        <PointsWrapper>
-          <Points>10000</Points>
-          <CoinWrapper>
-            <img alt="Coins" src={CoinIcon} />
-          </CoinWrapper>
+        <FullName loaded={isAuth}>{auth?.name}</FullName>
+        <PointsWrapper loaded={isAuth}>
+          <Points>{auth?.points}</Points>
+          <CoinWrapper>{isAuth ? <img alt="Coins" src={CoinIcon} /> : <Loading />}</CoinWrapper>
         </PointsWrapper>
       </LogIn>
     </HeaderWrapper>
