@@ -11,7 +11,7 @@ export const SelectWrapper = styled.div`
   }
 `;
 export const Option = styled.button`
-  margin: 0.4rem 1rem;
+  margin: 0.4rem 0.5rem;
   padding: 0.5rem 2rem;
   height: fit-content;
   width: fit-content;
@@ -23,6 +23,15 @@ export const Option = styled.button`
   font-size: 16px;
   outline: none;
   cursor: pointer;
+
+  ${(props) =>
+    props.active
+      ? `
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 1px 1px 8px rgba(255, 125, 1, 0.5);
+    `
+      : ""}
 
   &:hover {
     background: var(--primary);

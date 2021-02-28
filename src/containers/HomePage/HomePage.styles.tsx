@@ -18,7 +18,7 @@ export const HeroWrapper = styled.div`
 
   @media only screen and (max-width: 480px) {
     & > img {
-      height: 30vh;
+      height: 20vh;
     }
   }
 `;
@@ -51,7 +51,13 @@ export const FilterWrapper = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1440px) {
+    & > span {
+      display: none;
+    }
+  }
 `;
 
 export const Container = styled.section`
@@ -64,10 +70,6 @@ export const Container = styled.section`
 
 export const PaginationInfo = styled.span`
   font-size: 1.2rem;
-
-  @media only screen and (max-width: 935px) {
-    display: none;
-  }
 `;
 
 export const Divider = styled.div`
@@ -76,13 +78,35 @@ export const Divider = styled.div`
   margin: 0 1rem;
   background: var(--gray);
 
-  @media only screen and (max-width: 935px) {
+  @media only screen and (max-width: 1440px) {
     display: none;
   }
 `;
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-gap: 20px;
+`;
+
+export const PaginationWrapper = styled.div`
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--white);
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: 420px) {
+    justify-content: center;
+  }
+`;
+
+export const TopPagination = styled.div`
+  @media only screen and (max-width: 935px) {
+    display: none;
+  }
 `;

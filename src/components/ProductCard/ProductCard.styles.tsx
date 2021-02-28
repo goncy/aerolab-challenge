@@ -9,10 +9,10 @@ export const ProductCardWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 100%;
-
+  height: 250px;
   & > img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
   }
@@ -30,14 +30,14 @@ export const Row = styled.div`
 export const Category = styled.h4`
   color: #666666;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
 `;
 
 export const Cost = styled.span`
   height: 24px;
   color: var(--gold);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1rem;
 
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@ export const Name = styled.h1`
   text-align: left;
   color: var(--black);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.2rem;
 `;
 
 export const Button = styled.button`
@@ -64,7 +64,7 @@ export const Button = styled.button`
   background: var(--black);
   color: var(--white);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.2rem;
   border: none;
   outline: none;
   cursor: pointer;
