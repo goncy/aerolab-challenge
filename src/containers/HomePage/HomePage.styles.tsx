@@ -55,7 +55,7 @@ export const FilterWrapper = styled.div`
 `;
 
 export const Container = styled.section`
-  margin: 1rem 10vw;
+  margin: 2rem 10vw;
 
   @media only screen and (max-width: 1200px) {
     margin: 1rem;

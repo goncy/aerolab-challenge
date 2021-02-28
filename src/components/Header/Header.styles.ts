@@ -34,16 +34,6 @@ export const LogoWrapper = styled.div`
   & > img:hover {
     animation: fly 5s infinite alternate ease-in-out;
   }
-
-  @keyframes fly {
-    0% {
-      transform: translateY(0) rotateX(0);
-    }
-
-    50% {
-      transform: translateY(-5px) rotate3d(3, 2, 1, 30deg);
-    }
-  }
 `;
 
 export const LogIn = styled.div`

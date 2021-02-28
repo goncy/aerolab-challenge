@@ -28,3 +28,13 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) rotateX(0);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate3d(3, 2, 1, 30deg);
+  }
+}
