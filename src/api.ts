@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import {Product, User, NewPoints} from "./types";
+import {Product, User, History} from "./types";
 
 axios.defaults.headers = {
   "Content-Type": "application/json",
@@ -14,7 +14,9 @@ export default {
     axios.get("https://coding-challenge-api.aerolab.co/user/me"),
   getAllProducts: (): Promise<{data: Product}> =>
     axios.get("https://coding-challenge-api.aerolab.co/products"),
-  addPoints: (amount: number): Promise<{data: NewPoints}> =>
+  getHistory: (): Promise<{data: History[]}> =>
+    axios.get("https://coding-challenge-api.aerolab.co/user/history"),
+  addPoints: (amount: number): Promise<{data: {"New Points": number}}> =>
     axios.post("https://coding-challenge-api.aerolab.co/user/points", {amount}),
   redeemProduct: (productId: string): Promise<{message: string}> =>
     axios.post("https://coding-challenge-api.aerolab.co/redeem", {productId}),

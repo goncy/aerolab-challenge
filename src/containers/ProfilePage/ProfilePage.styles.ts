@@ -14,7 +14,7 @@ export const TopProfile = styled.div`
 
 export const Container = styled.section`
   margin: 1rem 10vw;
-  padding: 2rem 0;
+  padding-top: 2rem;
 
   @media only screen and (max-width: 1200px) {
     margin: 1rem;
@@ -47,6 +47,13 @@ export const H2 = styled.h2`
   text-align: left;
   font-weight: 500;
   font-size: 48px;
+`;
+
+export const H4 = styled.h4`
+  margin: 1rem 0;
+  text-align: left;
+  font-weight: 500;
+  font-size: 28px;
 `;
 
 export const PointsCards = styled.div`

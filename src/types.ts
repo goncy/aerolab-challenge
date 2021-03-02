@@ -17,6 +17,10 @@ export interface User {
   createDate: string;
 }
 
-export interface NewPoints {
-  newPoints: number;
+export interface History {
+  _id: string;
+  name: string;
+  cost: number;
+  category: string;
+  createDate: string;
 }
