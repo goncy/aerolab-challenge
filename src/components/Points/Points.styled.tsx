@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const PointsWrapper = styled.div`
-  height: 100%;
   min-height: 50px;
   background: var(--black);
   display: flex;

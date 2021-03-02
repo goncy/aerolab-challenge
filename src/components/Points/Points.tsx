@@ -12,7 +12,7 @@ interface PointsProps {
 }
 
 const Points: React.FC<PointsProps> = ({isAuth, points}) => {
-  const props = useSpring({points: isAuth ? points : 0});
+  const props = useSpring({points: points ? points : 0});
 
   return (
     <PointsWrapper loaded={isAuth}>

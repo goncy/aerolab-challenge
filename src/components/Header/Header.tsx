@@ -7,7 +7,7 @@ import Points from "../Points";
 import {HeaderWrapper, LogoWrapper, LogIn, FullName} from "./Header.styles";
 
 const Header = () => {
-  const {auth, isAuth} = React.useContext(AuthContext);
+  const [{auth, isAuth}] = React.useContext(AuthContext);
 
   return (
     <HeaderWrapper>

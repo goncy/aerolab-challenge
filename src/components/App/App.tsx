@@ -4,23 +4,21 @@ import {BrowserRouter as Router} from "react-router-dom";
 import routes from "../../routes";
 import api from "../../api";
 import {AuthContext} from "~/context";
-import {User} from "~/types";
 import Layout from "../Layout";
+import {AuthContextShape} from "../../context";
 
 // interface UserResponse {
 //   data: User;
 // }
 
 const App: React.FC = () => {
-  const [isAuth, setIsAuth] = useState(false);
-  const [auth, setAuth] = useState<User | null>(null);
+  const [authContext, setAuthContext] = useState<AuthContextShape>({auth: null, isAuth: false});
 
   useEffect(() => {
     api
       .logInUser()
       .then((res) => {
-        setAuth(res.data);
-        setIsAuth(true);
+        setAuthContext({auth: res.data, isAuth: true});
       })
       .catch((err) => {
         console.log(err);
@@ -28,7 +26,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{auth, isAuth}}>
+    <AuthContext.Provider value={[authContext, setAuthContext]}>
       <Router>
         <Layout>{routes()}</Layout>
       </Router>

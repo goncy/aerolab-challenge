@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import {Product, User} from "./types";
+import {Product, User, NewPoints} from "./types";
 
 axios.defaults.headers = {
   "Content-Type": "application/json",
@@ -14,4 +14,6 @@ export default {
     axios.get("https://coding-challenge-api.aerolab.co/user/me"),
   getAllProducts: (): Promise<{data: Product}> =>
     axios.get("https://coding-challenge-api.aerolab.co/products"),
+  addPoints: (amount: number): Promise<{data: NewPoints}> =>
+    axios.post("https://coding-challenge-api.aerolab.co/user/points", {amount}),
 };

@@ -16,3 +16,7 @@ export interface User {
   redeemHistory: [];
   createDate: string;
 }
+
+export interface NewPoints {
+  newPoints: number;
+}
