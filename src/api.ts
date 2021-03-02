@@ -16,4 +16,6 @@ export default {
     axios.get("https://coding-challenge-api.aerolab.co/products"),
   addPoints: (amount: number): Promise<{data: NewPoints}> =>
     axios.post("https://coding-challenge-api.aerolab.co/user/points", {amount}),
+  redeemProduct: (productId: string): Promise<{message: string}> =>
+    axios.post("https://coding-challenge-api.aerolab.co/redeem", {productId}),
 };

@@ -9,6 +9,7 @@ export const ProductCardWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   height: 250px;
   & > img {
     width: 100%;
@@ -70,8 +71,39 @@ export const Button = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
 
+  &:disabled {
+    background: var(--gray);
+    &:hover {
+      background: var(--gray);
+    }
+  }
   &:hover {
     background: var(--gold);
     color: var(--white);
   }
+`;
+
+export const BackDrop = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(34, 34, 34, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    width: 40px;
+    height: 40px;
+  }
+`;
+
+export const Span = styled.span`
+  margin: 1rem 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
 `;

@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 
 import CoinIcon from "../../assets/icons/coin.svg";
 import {Product} from "../../types";
+import api from "~/api";
+import {AuthContext} from "~/context";
 
 import {
   ProductCardWrapper,
@@ -12,6 +14,8 @@ import {
   Cost,
   Name,
   Button,
+  BackDrop,
+  Span,
 } from "./ProductCard.styles";
 
 interface ProductCardProps {
@@ -19,9 +23,25 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({product}) => {
+  const [{auth, isAuth}, setAuthContext] = useContext(AuthContext);
+
+  const redeemProduct = () => {
+    api.redeemProduct(product._id);
+    // Updating Users Points
+    setAuthContext({isAuth, auth: {...auth, points: auth.points - product.cost}});
+  };
+
+  const canNotBuy = auth?.points < product.cost;
+
   return (
     <ProductCardWrapper>
       <ImageWrapper>
+        {canNotBuy && (
+          <BackDrop>
+            <img alt="Coin Icon" src={CoinIcon} />
+            <Span>You need {product.cost} coins</Span>
+          </BackDrop>
+        )}
         <img alt={product.name} src={product.img.hdUrl} />
       </ImageWrapper>
       <InfoWrapper>
@@ -34,7 +54,9 @@ const ProductCard: React.FC<ProductCardProps> = ({product}) => {
         </Row>
         <Name>{product.name}</Name>
       </InfoWrapper>
-      <Button>REDEEM NOW</Button>
+      <Button disabled={canNotBuy} onClick={redeemProduct}>
+        REDEEM NOW
+      </Button>
     </ProductCardWrapper>
   );
 };
