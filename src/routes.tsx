@@ -1,18 +1,16 @@
 import React from "react";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 
 // Containers / Pages
 import HomePage from "./containers/HomePage";
-// import ProfilePage from "./containers/ProfilePage";
+import ProfilePage from "./containers/ProfilePage";
 
 const routes = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact component={HomePage} path="/" />
-        {/* <Route exact component={ProfilePage} path="/profile" /> */}
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact component={HomePage} path="/" />
+      <Route exact component={ProfilePage} path="/profile" />
+    </Switch>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from "react";
+import {useSpring, animated, config} from "react-spring";
 
 import HeroImage from "../../assets/header.png";
 import api from "../../api";
@@ -41,8 +42,8 @@ const HomePage = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [productsPerPage, setProductsPerPage] = useState(12);
   const [orderBy, setOrderBy] = useState(options[0].value);
-  const titleRef = useRef(null);
-  const executeScroll = () => titleRef.current.scrollIntoView();
+  const catalogueRef = useRef(null);
+  const [, setY] = useSpring(() => ({y: 0}));
 
   const lastIndex = currentPage * productsPerPage;
   const fristIndex = lastIndex - productsPerPage;
@@ -78,47 +79,80 @@ const HomePage = () => {
     });
   }, [products, orderBy]);
 
-  const paginate = (pageNumber) => {
+  const paginate = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
-      executeScroll();
+      // executeScroll();
+      scrollToTarget();
     }
+  };
+
+  let isStopped = false;
+  const onWheel = () => {
+    isStopped = true;
+    window.removeEventListener("wheel", onWheel);
+  };
+
+  const scrollToTarget = () => {
+    const element = catalogueRef.current;
+    const value = window.scrollY + element.getBoundingClientRect().bottom;
+
+    window.addEventListener("wheel", onWheel);
+
+    setY({
+      y: value - 80,
+      reset: true,
+      from: {y: window.scrollY},
+      onRest: () => {
+        isStopped = false;
+        window.removeEventListener("wheel", onWheel);
+      },
+      onFrame: (props) => {
+        if (!isStopped) {
+          window.scroll(0, props.y);
+        }
+      },
+    });
   };
 
   return (
     <HomePageWrapper>
-      <HeroWrapper>
+      <HeroWrapper ref={catalogueRef}>
         <img alt="Electronics Hero" src={HeroImage} />
-        <H2 ref={titleRef}>Electronics</H2>
+        <H2>Electronics</H2>
       </HeroWrapper>
-      <Container id={"fitler"}>
-        <FilterWrapper>
-          <PaginationInfo>
-            {numberOfProductsUntilCurrentPage} of <strong>{products.length}</strong> products
-          </PaginationInfo>
-          <Divider />
-          <Select options={options} orderBy={orderBy} setOrderBy={setOrderBy} />
-          <Divider />
-          <TopPagination>
+      <animated.div>
+        <Container>
+          <FilterWrapper>
+            <PaginationInfo>
+              {numberOfProductsUntilCurrentPage} of <strong>{products.length}</strong> products
+            </PaginationInfo>
+            <Divider />
+            <Select options={options} orderBy={orderBy} setOrderBy={setOrderBy} />
+            <Divider />
+            <TopPagination>
+              <Pagination currentPage={currentPage} paginate={paginate} totalPages={totalPages} />
+            </TopPagination>
+          </FilterWrapper>
+        </Container>
+        <Container>
+          <Grid>
+            {status === "success"
+              ? visibleProducts.map((product) => (
+                  <ProductCard key={product._id} product={product} />
+                ))
+              : null}
+          </Grid>
+        </Container>
+        <Container>
+          <PaginationWrapper>
+            <PaginationInfo>
+              {numberOfProductsUntilCurrentPage} of <strong>{products.length}</strong> products
+            </PaginationInfo>
             <Pagination currentPage={currentPage} paginate={paginate} totalPages={totalPages} />
-          </TopPagination>
-        </FilterWrapper>
-      </Container>
-      <Container>
-        <Grid>
-          {status === "success"
-            ? visibleProducts.map((product) => <ProductCard key={product._id} product={product} />)
-            : null}
-        </Grid>
-      </Container>
-      <Container>
-        <PaginationWrapper>
-          <PaginationInfo>
-            {numberOfProductsUntilCurrentPage} of <strong>{products.length}</strong> products
-          </PaginationInfo>
-          <Pagination currentPage={currentPage} paginate={paginate} totalPages={totalPages} />
-        </PaginationWrapper>
-      </Container>
+          </PaginationWrapper>
+        </Container>
+      </animated.div>
     </HomePageWrapper>
   );
 };

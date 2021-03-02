@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import {BrowserRouter as Router} from "react-router-dom";
 
 import routes from "../../routes";
 import api from "../../api";
@@ -28,7 +29,9 @@ const App: React.FC = () => {
 
   return (
     <AuthContext.Provider value={{auth, isAuth}}>
-      <Layout>{routes()}</Layout>
+      <Router>
+        <Layout>{routes()}</Layout>
+      </Router>
     </AuthContext.Provider>
   );
 };

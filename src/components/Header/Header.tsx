@@ -1,34 +1,22 @@
 import React from "react";
 
-import AeroLabLogo from "../../assets/logo.svg";
-import CoinIcon from "../../assets/icons/coin.svg";
 import {AuthContext} from "~/context";
-import Loading from "../Loading/Loading";
+import AeroLabLogo from "../../assets/logo.svg";
+import Points from "../Points";
 
-import {
-  HeaderWrapper,
-  LogoWrapper,
-  LogIn,
-  FullName,
-  PointsWrapper,
-  Points,
-  CoinWrapper,
-} from "./Header.styles";
+import {HeaderWrapper, LogoWrapper, LogIn, FullName} from "./Header.styles";
 
 const Header = () => {
   const {auth, isAuth} = React.useContext(AuthContext);
 
   return (
     <HeaderWrapper>
-      <LogoWrapper>
+      <LogoWrapper to="/">
         <img alt="Aero Lab" src={AeroLabLogo} />
       </LogoWrapper>
-      <LogIn>
+      <LogIn to="/profile">
         <FullName loaded={isAuth}>{auth?.name}</FullName>
-        <PointsWrapper loaded={isAuth}>
-          <Points>{auth?.points}</Points>
-          <CoinWrapper>{isAuth ? <img alt="Coins" src={CoinIcon} /> : <Loading />}</CoinWrapper>
-        </PointsWrapper>
+        <Points isAuth={isAuth} points={auth?.points} />
       </LogIn>
     </HeaderWrapper>
   );
