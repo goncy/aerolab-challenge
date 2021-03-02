@@ -87,8 +87,8 @@ export const PointsCard = styled.div`
       : ""}
 
   &:hover {
-    filter: brightness(0.9);
-    border: 2px solid var(--black);
+    filter: brightness(1.08);
+    border: 1px solid var(--gray);
 
     & > h3 {
       /* color: var(--black); */

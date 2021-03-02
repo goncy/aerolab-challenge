@@ -24,3 +24,8 @@ export interface History {
   category: string;
   createDate: string;
 }
+
+export interface Notification {
+  key: number;
+  msg: string;
+}

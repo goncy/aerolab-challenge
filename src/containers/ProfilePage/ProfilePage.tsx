@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState, useRef} from "react";
 import dayjs from "dayjs";
 
 import {AuthContext} from "~/context";
@@ -7,6 +7,8 @@ import Points from "~/components/Points";
 import api from "~/api";
 import Table from "~/components/Table/Table";
 import {History} from "../../types";
+import NotificationHub from "~/components/Notification";
+import Loading from "~/components/Loading/Loading";
 
 import {
   ProfilePageWrapper,
@@ -25,6 +27,8 @@ import {
 const ProfilePage: React.FC = () => {
   const [{isAuth, auth}, setAuthContext] = useContext(AuthContext);
   const [rows, setRows] = useState<History[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const message = useRef(null);
 
   useEffect(() => {
     api.getHistory().then((res) => {
@@ -41,9 +45,19 @@ const ProfilePage: React.FC = () => {
   }, []);
 
   const addPoints = async (amount: number) => {
-    const res = await api.addPoints(amount);
-
-    setAuthContext({isAuth, auth: {...auth, points: res.data["New Points"]}});
+    if (loading) return;
+    setLoading(true);
+    api
+      .addPoints(amount)
+      .then((res) => {
+        setAuthContext({isAuth, auth: {...auth, points: res.data["New Points"]}});
+        message.current(`You got it ${amount} points!`);
+        setLoading(false);
+      })
+      .catch((err) => {
+        message.current("Ops! Somthing went wrong.");
+        setLoading(false);
+      });
   };
 
   const columns = ["NAME", "COST", "CATEGORY", "DATE"];
@@ -62,13 +76,13 @@ const ProfilePage: React.FC = () => {
           </ProfileCard>
           <PointsCards>
             <PointsCard type1 onClick={() => addPoints(7500)}>
-              <H3>GET 7500 COINS</H3>
+              {loading ? <Loading /> : <H3>GET 7500 COINS</H3>}
             </PointsCard>
             <PointsCard type2 onClick={() => addPoints(5000)}>
-              <H3>GET 5000 COINS</H3>
+              {loading ? <Loading /> : <H3>GET 5000 COINS</H3>}
             </PointsCard>
             <PointsCard type3 onClick={() => addPoints(1000)}>
-              <H3>GET 1000 COINS</H3>
+              {loading ? <Loading /> : <H3>GET 1000 COINS</H3>}
             </PointsCard>
           </PointsCards>
         </TopProfile>
@@ -77,6 +91,7 @@ const ProfilePage: React.FC = () => {
         <H4>Redeem History</H4>
         <Table columns={columns} rows={rows} />
       </Container>
+      <NotificationHub children={(add) => (message.current = add)} />
     </ProfilePageWrapper>
   );
 };

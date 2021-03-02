@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, Ref} from "react";
 
 import CoinIcon from "../../assets/icons/coin.svg";
 import {Product} from "../../types";
@@ -20,13 +20,21 @@ import {
 
 interface ProductCardProps {
   product: Product;
+  messageRef: Ref;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({product}) => {
+const ProductCard: React.FC<ProductCardProps> = ({product, messageRef}) => {
   const [{auth, isAuth}, setAuthContext] = useContext(AuthContext);
 
   const redeemProduct = () => {
-    api.redeemProduct(product._id);
+    api
+      .redeemProduct(product._id)
+      .then(() => {
+        messageRef.current(`${product.name} redeem it.`);
+      })
+      .catch((err) => {
+        messageRef.current(`Ops! Something went wrong.`);
+      });
     // Updating Users Points
     setAuthContext({isAuth, auth: {...auth, points: auth.points - product.cost}});
   };

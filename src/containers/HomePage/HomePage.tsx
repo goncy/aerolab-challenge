@@ -6,6 +6,7 @@ import api from "../../api";
 import Select from "../../components/Select";
 import ProductCard from "../../components/ProductCard";
 import Pagination from "../../components/Pagination";
+import NotificationHub from "~/components/Notification";
 
 import {
   HomePageWrapper,
@@ -43,6 +44,7 @@ const HomePage = () => {
   const [productsPerPage, setProductsPerPage] = useState(12);
   const [orderBy, setOrderBy] = useState(options[0].value);
   const catalogueRef = useRef(null);
+  const message = useRef(null);
   const [, setY] = useSpring(() => ({y: 0}));
 
   const lastIndex = currentPage * productsPerPage;
@@ -139,7 +141,7 @@ const HomePage = () => {
           <Grid>
             {status === "success"
               ? visibleProducts.map((product) => (
-                  <ProductCard key={product._id} product={product} />
+                  <ProductCard key={product._id} messageRef={message} product={product} />
                 ))
               : null}
           </Grid>
@@ -153,6 +155,7 @@ const HomePage = () => {
           </PaginationWrapper>
         </Container>
       </animated.div>
+      <NotificationHub children={(add) => (message.current = add)} />
     </HomePageWrapper>
   );
 };
