@@ -89,6 +89,7 @@ export const BackDrop = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  border-radius: 6px;
   background: rgba(34, 34, 34, 0.5);
   display: flex;
   flex-direction: column;

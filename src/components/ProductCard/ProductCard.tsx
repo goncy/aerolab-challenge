@@ -48,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({product, messageRef}) => {
         {canNotBuy && (
           <BackDrop>
             <img alt="Coin Icon" src={CoinIcon} />
-            <Span>You need {product.cost} coins</Span>
+            <Span>You need {product.cost - auth.points} more coins</Span>
           </BackDrop>
         )}
         <img alt={product.name} src={product.img.hdUrl} />

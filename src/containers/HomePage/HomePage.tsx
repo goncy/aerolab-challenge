@@ -42,7 +42,7 @@ const HomePage = () => {
   const [orderedProducts, setOrderedProducts] = useState([]);
   const [status, setStatus] = useState("pending");
   const [currentPage, setCurrentPage] = useState(0);
-  const [productsPerPage, setProductsPerPage] = useState(12);
+  const [productsPerPage, setProductsPerPage] = useState(16);
   const [orderBy, setOrderBy] = useState(options[0].value);
   const catalogueRef = useRef(null);
   const message = useRef(null);

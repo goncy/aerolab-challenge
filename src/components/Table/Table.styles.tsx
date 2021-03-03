@@ -91,6 +91,10 @@ export const TableFooter = styled.div`
   > span {
     font-size: 1.2rem;
   }
+
+  @media only screen and (max-width: 420px) {
+    justify-content: center;
+  }
 `;
 
 export const CellSkeleton = styled.div`

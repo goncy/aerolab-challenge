@@ -110,8 +110,8 @@ export const PointsCard = styled.div`
       : ""}
   ${(props) =>
     props.type3
-      ? `background-color: #0093E9;
-      background-image: linear-gradient(43deg, #0093E9 0%, #80D0C7 100%);
+      ? `background-color: #FAD961;
+      background-image: linear-gradient(223deg, #FAD961 0%, #F76B1C 100%);
       `
       : ""}
 
