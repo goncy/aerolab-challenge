@@ -34,7 +34,6 @@ export const TableBody = styled.div`
   width: 100%;
   margin: 1rem 0;
   border-radius: 3px;
-  background: #fcfcfc;
 `;
 
 export const Row = styled.div`
@@ -67,4 +66,25 @@ export const Cell = styled.div`
 
   ${(props) => (props.gold ? "color: var(--gold)" : "")}
   ${(props) => (props.gray ? "color: var(--gray)" : "")}
+`;
+
+export const TableFooter = styled.div`
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background: var(--white);
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: 420px) {
+    justify-content: center;
+  }
+
+  > span {
+    font-size: 1.2rem;
+  }
 `;

@@ -32,12 +32,12 @@ const ProfilePage: React.FC = () => {
 
   useEffect(() => {
     api.getHistory().then((res) => {
-      const rowsData: History[] = res.data.map((r) => ({
+      const rowsData: History[] = res.data.reverse().map((r) => ({
         _id: r._id,
         name: r.name,
         cost: r.cost,
         category: r.category,
-        createDate: dayjs(r.createDate).format("MMM D, YYYY h:mm A"),
+        createDate: dayjs(r.createDate).format("MMMM DD, YYYY h:mm A"),
       }));
 
       setRows([...rowsData]);
