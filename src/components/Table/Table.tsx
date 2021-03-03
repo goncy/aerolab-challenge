@@ -11,26 +11,26 @@ import {
   Row,
   Cell,
   TableFooter,
+  RowSkeleton,
+  CellSkeleton,
 } from "./Table.styles";
 
 interface TableProps {
   columns: string[];
   rows: History[];
+  loading: boolean;
 }
 
-const Table: React.FC<TableProps> = ({columns, rows = []}) => {
+const Table: React.FC<TableProps> = ({columns, rows = [], loading = true}) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [redeemsPerPage, setProductsPerPage] = useState(10);
+  const [rowsPerPage, setProductsPerPage] = useState(10);
 
-  const lastIndex = currentPage * redeemsPerPage;
-  const fristIndex = lastIndex - redeemsPerPage;
-  const redeemsVisibles = rows
-    .reverse()
-    // .sort((a, b) => ((a.createDate as any) + b.createDate) as any)
-    .slice(fristIndex, lastIndex);
-  const totalPages = Math.round(rows.length / redeemsPerPage);
-  const numberOfRedeemsUntilCurrentPage =
-    currentPage < totalPages ? currentPage * redeemsPerPage : rows.length;
+  const lastIndex = currentPage * rowsPerPage;
+  const fristIndex = lastIndex - rowsPerPage;
+  const rowsVisibles = rows.reverse().slice(fristIndex, lastIndex);
+  const totalPages = Math.round(rows.length / rowsPerPage);
+  const numberOfRowsUntilCurrentPage =
+    currentPage < totalPages ? currentPage * rowsPerPage : rows.length;
 
   const paginate = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
@@ -39,6 +39,8 @@ const Table: React.FC<TableProps> = ({columns, rows = []}) => {
       // scrollToTarget();
     }
   };
+
+  const skeletons = Array.from("a".repeat(rowsPerPage));
 
   return (
     <TableWrapper>
@@ -49,7 +51,13 @@ const Table: React.FC<TableProps> = ({columns, rows = []}) => {
       </TableHeader>
 
       <TableBody>
-        {redeemsVisibles.map(({_id, ...row}: History) => {
+        {loading &&
+          skeletons.map((s, i) => (
+            <RowSkeleton key={i}>
+              <CellSkeleton />
+            </RowSkeleton>
+          ))}
+        {rowsVisibles.map(({_id, ...row}: History) => {
           const arrValues = Object.values(row);
 
           return (
@@ -65,7 +73,7 @@ const Table: React.FC<TableProps> = ({columns, rows = []}) => {
       </TableBody>
       <TableFooter>
         <span>
-          {numberOfRedeemsUntilCurrentPage} of <strong>{rows.length}</strong> redeems
+          {numberOfRowsUntilCurrentPage} of <strong>{rows.length}</strong> rows
         </span>
         <Pagination currentPage={currentPage} paginate={paginate} totalPages={totalPages} />
       </TableFooter>

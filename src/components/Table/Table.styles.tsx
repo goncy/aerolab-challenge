@@ -88,3 +88,25 @@ export const TableFooter = styled.div`
     font-size: 1.2rem;
   }
 `;
+
+export const CellSkeleton = styled.div`
+  padding: 1rem;
+  width: 1fr;
+  height: 100%;
+
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-collapse: collapse;
+  border-radius: 5px;
+  background: white;
+`;
+
+export const RowSkeleton = styled.div`
+  width: 100%;
+  height: 57px;
+  padding-bottom: 4px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4px;
+`;

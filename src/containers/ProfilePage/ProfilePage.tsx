@@ -27,21 +27,28 @@ import {
 const ProfilePage: React.FC = () => {
   const [{isAuth, auth}, setAuthContext] = useContext(AuthContext);
   const [rows, setRows] = useState<History[]>([]);
+  const [status, setStatus] = useState<string>("pending");
   const [loading, setLoading] = useState<boolean>(false);
   const message = useRef(null);
 
   useEffect(() => {
-    api.getHistory().then((res) => {
-      const rowsData: History[] = res.data.reverse().map((r) => ({
-        _id: r._id,
-        name: r.name,
-        cost: r.cost,
-        category: r.category,
-        createDate: dayjs(r.createDate).format("MMMM DD, YYYY h:mm A"),
-      }));
+    api
+      .getHistory()
+      .then((res) => {
+        const rowsData: History[] = res.data.reverse().map((r) => ({
+          _id: r._id,
+          name: r.name,
+          cost: r.cost,
+          category: r.category,
+          createDate: dayjs(r.createDate).format("MMMM DD, YYYY h:mm A"),
+        }));
 
-      setRows([...rowsData]);
-    });
+        setRows([...rowsData]);
+        setStatus("success");
+      })
+      .catch((err) => {
+        setStatus("failed");
+      });
   }, []);
 
   const addPoints = async (amount: number) => {
@@ -89,7 +96,7 @@ const ProfilePage: React.FC = () => {
       </Container>
       <Container>
         <H4>Redeem History</H4>
-        <Table columns={columns} rows={rows} />
+        <Table columns={columns} loading={status === "pending"} rows={rows} />
       </Container>
       <NotificationHub children={(add) => (message.current = add)} />
     </ProfilePageWrapper>
