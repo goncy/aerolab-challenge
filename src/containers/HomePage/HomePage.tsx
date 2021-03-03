@@ -7,6 +7,7 @@ import Select from "../../components/Select";
 import ProductCard from "../../components/ProductCard";
 import Pagination from "../../components/Pagination";
 import NotificationHub from "~/components/Notification";
+import ProductCardSkeleton from "~/components/ProductCardSkeleton";
 
 import {
   HomePageWrapper,
@@ -117,6 +118,8 @@ const HomePage = () => {
     });
   };
 
+  const skeletons = Array.from(">>aerolab.co");
+
   return (
     <HomePageWrapper>
       <HeroWrapper ref={catalogueRef}>
@@ -139,6 +142,7 @@ const HomePage = () => {
         </Container>
         <Container>
           <Grid>
+            {status === "pending" && skeletons.map((s, i) => <ProductCardSkeleton key={i} />)}
             {status === "success"
               ? visibleProducts.map((product) => (
                   <ProductCard key={product._id} messageRef={message} product={product} />

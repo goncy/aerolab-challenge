@@ -4,6 +4,7 @@ import CoinIcon from "../../assets/icons/coin.svg";
 import {Product} from "../../types";
 import api from "~/api";
 import {AuthContext} from "~/context";
+import Loading from "../Loading/Loading";
 
 import {
   ProductCardWrapper,

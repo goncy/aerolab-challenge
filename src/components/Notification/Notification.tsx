@@ -10,7 +10,7 @@ let id = 0;
 
 const NotificationHub = ({
   config = {tension: 125, friction: 20, precision: 0.1},
-  timeout = 3000,
+  timeout = 2000,
   children,
 }) => {
   const [refMap] = useState(() => new WeakMap());
@@ -40,7 +40,7 @@ const NotificationHub = ({
 
   return (
     <NotificationHubWrapper>
-      {transitions.map(({key, item, props: {life, ...style}}) => (
+      {transitions.slice(-3).map(({key, item, props: {life, ...style}}) => (
         <Message key={key} style={style}>
           <Content ref={(ref) => ref && refMap.set(item, ref)}>
             <Life style={{right: life}} />

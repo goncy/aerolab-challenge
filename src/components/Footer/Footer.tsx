@@ -9,7 +9,10 @@ const Footer: React.FC = () => {
     <FooterWrapper>
       <img alt={"Aerolab"} src={Logo} />
       <Code>
-        Developed by <span>@sshuyn</span>
+        Developed by{" "}
+        <a href={"https://github.com/sshuyn"} rel={"noreferrer"} target={"_blank"}>
+          @sshuyn
+        </a>
       </Code>
     </FooterWrapper>
   );

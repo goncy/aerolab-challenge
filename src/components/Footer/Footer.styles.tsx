@@ -22,7 +22,7 @@ export const Code = styled.code`
   font-weight: normal;
   font-size: 16px;
 
-  & > span {
+  & > a {
     cursor: pointer;
     color: var(--primary);
   }
