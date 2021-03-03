@@ -22,6 +22,7 @@ import {
   H4,
   PointsCards,
   PointsCard,
+  PointsContainer,
 } from "./ProfilePage.styles";
 
 const ProfilePage: React.FC = () => {
@@ -36,7 +37,7 @@ const ProfilePage: React.FC = () => {
       .getHistory()
       .then((res) => {
         const rowsData: History[] = res.data.reverse().map((r) => ({
-          _id: r._id,
+          _id: r._id + r.createDate,
           name: r.name,
           cost: r.cost,
           category: r.category,
@@ -79,8 +80,11 @@ const ProfilePage: React.FC = () => {
               <img alt={"Profile Picture"} src={AvatarIcon} />
             </AvatarWrapper>
             <Name>{auth?.name}</Name>
-            <Points isAuth={isAuth} points={auth?.points} />
+            <PointsContainer>
+              <Points isAuth={isAuth} points={auth?.points} />
+            </PointsContainer>
           </ProfileCard>
+          <H4>Get Coins</H4>
           <PointsCards>
             <PointsCard type1 onClick={() => addPoints(7500)}>
               {loading ? <Loading /> : <H3>GET 7500 COINS</H3>}

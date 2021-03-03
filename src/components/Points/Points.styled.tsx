@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const PointsWrapper = styled.div`
-  min-height: 50px;
+  min-height: -webkit-fill-available;
   background: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
-
+  min-width: 48px;
   border-radius: ${(props) => (props.loaded ? "50px" : "48px")};
   padding: ${(props) => (props.loaded ? "0 1rem" : "0")};
-  width: ${(props) => (props.loaded ? "fit-content" : "48px")};
+  /* width: ${(props) => (props.loaded ? "fit-content" : "48px")}; */
   transition: all 0.8s ease;
 
   & > span {
@@ -33,7 +33,7 @@ export const CoinWrapper = styled.div`
   align-items: center;
 
   & > img {
-    height: 50%;
+    min-height: 40px;
     width: 20px;
     animation: rotation 3s infinite alternate ease-in-out;
   }

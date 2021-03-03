@@ -13,6 +13,9 @@ export const TableHeader = styled.div`
 
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
+  @media only screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const TableHead = styled.div`
@@ -32,8 +35,12 @@ export const TableHead = styled.div`
 
 export const TableBody = styled.div`
   width: 100%;
+
   margin: 1rem 0;
   border-radius: 3px;
+  @media only screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 export const Row = styled.div`
@@ -80,9 +87,6 @@ export const TableFooter = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  @media only screen and (max-width: 420px) {
-    justify-content: center;
-  }
 
   > span {
     font-size: 1.2rem;
@@ -109,4 +113,11 @@ export const RowSkeleton = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4px;
+`;
+
+export const RedeemList = styled.div`
+  display: none;
+  @media only screen and (max-width: 720px) {
+    display: block;
+  }
 `;

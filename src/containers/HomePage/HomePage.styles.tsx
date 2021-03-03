@@ -10,14 +10,14 @@ export const HeroWrapper = styled.div`
   position: relative;
 
   & > img {
-    height: 48vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center right;
   }
 
   @media only screen and (max-width: 480px) {
-    max-height: 20vh;
+    max-height: 30vh;
   }
 `;
 
@@ -83,7 +83,7 @@ export const Divider = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 `;
 

@@ -1,20 +1,26 @@
 import styled from "styled-components";
 
-export const ProfilePageWrapper = styled.main`
-  min-height: 100%;
-  margin-top: 80px;
+export const ProfilePageWrapper = styled.div`
+  width: 100%;
 `;
 
 export const TopProfile = styled.div`
   width: 100%;
   /* background: red; */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+  }
 `;
 
 export const Container = styled.section`
   margin: 1rem 10vw;
-  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   @media only screen and (max-width: 1200px) {
     margin: 1rem;
@@ -23,8 +29,8 @@ export const Container = styled.section`
 
 export const ProfileCard = styled.div`
   background: var(--white);
-  width: 35%;
-  margin-right: 20px;
+  width: 100%;
+  margin: 0 auto;
   min-height: 420px;
   display: flex;
   border: 1px solid #d9d9d9;
@@ -32,9 +38,19 @@ export const ProfileCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
-export const AvatarWrapper = styled.div``;
+export const AvatarWrapper = styled.div`
+  @media only screen and (max-width: 768px) {
+    > img {
+      width: 75%;
+    }
+  }
+`;
 
 export const Name = styled.span`
   margin: 1rem 0;
@@ -46,20 +62,27 @@ export const H2 = styled.h2`
   margin: 1rem 0;
   text-align: left;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 3rem;
+  align-self: flex-start;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 export const H4 = styled.h4`
   margin: 1rem 0;
   text-align: left;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.5rem;
+  align-self: flex-start;
 `;
 
 export const PointsCards = styled.div`
-  width: 65%;
+  /* margin: 1rem 0; */
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 `;
 
@@ -75,15 +98,21 @@ export const PointsCard = styled.div`
 
   ${(props) =>
     props.type1
-      ? "background: linear-gradient(284.63deg, #222222 4.3%, rgba(34, 34, 34, 0.75) 89.9%);"
+      ? `background-color: #21D4FD;
+      background-image: linear-gradient(223deg, #21D4FD 0%, #B721FF 100%);
+      `
       : ""}
   ${(props) =>
     props.type2
-      ? "background: linear-gradient(284.24deg, #f8b013 8.86%, rgba(248, 176, 19, 0.75) 85.99%);"
+      ? `background-color: #FF9A8B;
+      background-image: linear-gradient(223deg, #FF9A8B 0%, #FF6A88 55%);
+      `
       : ""}
   ${(props) =>
     props.type3
-      ? "background: linear-gradient(284.63deg, #6EE8FF 4.3%, rgba(115, 219, 238, 0.75) 89.9%);"
+      ? `background-color: #0093E9;
+      background-image: linear-gradient(43deg, #0093E9 0%, #80D0C7 100%);
+      `
       : ""}
 
   &:hover {
@@ -100,4 +129,8 @@ export const H3 = styled.h3`
   font-size: 24px;
   line-height: 36px;
   color: var(--white);
+`;
+
+export const PointsContainer = styled.div`
+  height: 50px;
 `;

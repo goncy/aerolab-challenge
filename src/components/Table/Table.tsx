@@ -2,6 +2,7 @@ import React, {useState} from "react";
 
 import {History} from "../../types";
 import Pagination from "../Pagination";
+import RedeemCard from "../RedeemCardWrapper/RedeemCard";
 
 import {
   TableWrapper,
@@ -13,6 +14,7 @@ import {
   TableFooter,
   RowSkeleton,
   CellSkeleton,
+  RedeemList,
 } from "./Table.styles";
 
 interface TableProps {
@@ -71,6 +73,15 @@ const Table: React.FC<TableProps> = ({columns, rows = [], loading = true}) => {
           );
         })}
       </TableBody>
+
+      <RedeemList>
+        {rowsVisibles.map(({_id, ...row}) => {
+          const arrValues = Object.values(row);
+
+          return <RedeemCard key={_id} {...row} />;
+        })}
+      </RedeemList>
+
       <TableFooter>
         <span>
           {numberOfRowsUntilCurrentPage} of <strong>{rows.length}</strong> rows

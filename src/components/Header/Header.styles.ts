@@ -2,12 +2,12 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
-  width: 100%;
+  width: inherit;
   height: 80px;
   padding: 0 10%;
   background: rgba(255, 255, 255, 0.95);
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
 
   display: flex;
   justify-content: space-between;
@@ -57,8 +57,9 @@ export const LogIn = styled(Link)`
 export const FullName = styled.span`
   text-decoration: none;
   color: var(--black);
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: ${(props) => (props.loaded ? "0 1rem" : "0")};
-  width: ${(props) => (props.loaded ? "fit-content" : "0")};
+  /* width: ${(props) => (props.loaded ? "fit-content" : "0")}; */
+  opacity: ${(props) => (props.loaded ? "1" : "0")};
   transition: all 1.8s ease;
 `;
