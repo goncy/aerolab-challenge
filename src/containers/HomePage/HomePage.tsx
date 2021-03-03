@@ -8,6 +8,7 @@ import ProductCard from "../../components/ProductCard";
 import Pagination from "../../components/Pagination";
 import NotificationHub from "~/components/Notification";
 import ProductCardSkeleton from "~/components/ProductCardSkeleton";
+import {Product} from "~/types";
 
 import {
   HomePageWrapper,
@@ -38,14 +39,14 @@ const options = [
 ];
 
 const HomePage = () => {
-  const [products, setProducts] = useState([]);
-  const [orderedProducts, setOrderedProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [orderedProducts, setOrderedProducts] = useState<Product[]>([]);
   const [status, setStatus] = useState("pending");
   const [currentPage, setCurrentPage] = useState(0);
   const [productsPerPage, setProductsPerPage] = useState(16);
   const [orderBy, setOrderBy] = useState(options[0].value);
   const catalogueRef = useRef(null);
-  const message = useRef(null);
+  const message = useRef((m: string) => m);
   const [, setY] = useSpring(() => ({y: 0}));
 
   const lastIndex = currentPage * productsPerPage;
@@ -59,8 +60,8 @@ const HomePage = () => {
     api
       .getAllProducts()
       .then((res) => {
-        setProducts(() => res.data);
-        setOrderedProducts(() => products);
+        setProducts(res.data);
+        setOrderedProducts(products);
         setCurrentPage(1);
         setStatus("success");
       })
@@ -97,7 +98,7 @@ const HomePage = () => {
   };
 
   const scrollToTarget = () => {
-    const element = catalogueRef.current;
+    const element: any = catalogueRef.current;
     const value = window.scrollY + element.getBoundingClientRect().bottom;
 
     window.addEventListener("wheel", onWheel);
@@ -110,11 +111,11 @@ const HomePage = () => {
         isStopped = false;
         window.removeEventListener("wheel", onWheel);
       },
-      onFrame: (props) => {
-        if (!isStopped) {
-          window.scroll(0, props.y);
-        }
-      },
+      // onFrame: (props) => {
+      //   if (!isStopped) {
+      //     window.scroll(0, props?.y);
+      //   }
+      // },
     });
   };
 
@@ -159,7 +160,7 @@ const HomePage = () => {
           </PaginationWrapper>
         </Container>
       </animated.div>
-      <NotificationHub children={(add) => (message.current = add)} />
+      <NotificationHub>{(add: any) => (message.current = add)}</NotificationHub>
     </HomePageWrapper>
   );
 };

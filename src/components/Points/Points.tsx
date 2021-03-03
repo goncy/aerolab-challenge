@@ -8,7 +8,7 @@ import {PointsWrapper, PointsNumber, CoinWrapper} from "./Points.styled";
 
 interface PointsProps {
   isAuth: boolean;
-  points: number | undefined;
+  points: any;
 }
 
 const Points: React.FC<PointsProps> = ({isAuth, points}) => {
@@ -17,7 +17,7 @@ const Points: React.FC<PointsProps> = ({isAuth, points}) => {
   return (
     <PointsWrapper loaded={isAuth}>
       <PointsNumber>
-        <animated.span>{props.points.interpolate((x) => x.toFixed(0))}</animated.span>
+        <animated.span>{props.points.interpolate((x: any) => x.toFixed(0))}</animated.span>
       </PointsNumber>
       <CoinWrapper>{isAuth ? <img alt="Coins" src={CoinIcon} /> : <Loading />}</CoinWrapper>
     </PointsWrapper>

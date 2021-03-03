@@ -30,7 +30,7 @@ const ProfilePage: React.FC = () => {
   const [rows, setRows] = useState<History[]>([]);
   const [status, setStatus] = useState<string>("pending");
   const [loading, setLoading] = useState<boolean>(false);
-  const message = useRef(null);
+  const message = useRef((m: string) => m);
 
   useEffect(() => {
     api
@@ -102,7 +102,7 @@ const ProfilePage: React.FC = () => {
         <H4>Redeem History</H4>
         <Table columns={columns} loading={status === "pending"} rows={rows} />
       </Container>
-      <NotificationHub children={(add) => (message.current = add)} />
+      <NotificationHub>{(add: any) => (message.current = add)}</NotificationHub>
     </ProfilePageWrapper>
   );
 };

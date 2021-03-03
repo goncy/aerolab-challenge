@@ -7,7 +7,13 @@ import NextIcon from "../../assets/icons/arrow-right.svg";
 
 import {PaginationWrapper, Img} from "./Pagination.styles";
 
-const Pagination = ({currentPage, totalPages, paginate}) => {
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  paginate: (num: number) => void;
+}
+
+const Pagination: React.FC<PaginationProps> = ({currentPage, totalPages, paginate}) => {
   return (
     <PaginationWrapper>
       <Img

@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import {animated} from "react-spring";
 
-export const NotificationHubWrapper = styled.div`
+interface NotificationHubWrapperProps {
+  top: boolean;
+  position: string;
+}
+export const NotificationHubWrapper = styled.div<NotificationHubWrapperProps>`
   position: fixed;
   z-index: 1000;
   width: 0 auto;
@@ -30,7 +34,12 @@ export const Message = styled(animated.div)`
   }
 `;
 
-export const Content = styled.div`
+interface ContentProps {
+  top: boolean;
+  canClose: boolean;
+}
+
+export const Content = styled.div<ContentProps>`
   color: var(--white);
   font-weight: 500;
   background: var(--black);
@@ -65,7 +74,11 @@ export const Button = styled.button`
   }
 `;
 
-export const Life = styled(animated.div)`
+interface LifeProps {
+  top: boolean;
+}
+
+export const Life = styled(animated.div)<LifeProps>`
   position: absolute;
   bottom: ${(props) => (props.top ? "10px" : "0")};
   left: 0px;

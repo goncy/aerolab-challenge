@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const PointsWrapper = styled.div`
+interface PoinstWrapper {
+  loaded?: boolean;
+}
+
+export const PointsWrapper = styled.div<PoinstWrapper>`
   min-height: -webkit-fill-available;
   background: var(--black);
   display: flex;

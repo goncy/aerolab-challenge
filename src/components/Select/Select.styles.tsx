@@ -10,7 +10,12 @@ export const SelectWrapper = styled.div`
     flex-direction: column;
   }
 `;
-export const Option = styled.button`
+
+interface OptionProps {
+  active: boolean;
+}
+
+export const Option = styled.button<OptionProps>`
   margin: 0.4rem 0.5rem;
   padding: 0.5rem 2rem;
   height: fit-content;

@@ -21,7 +21,7 @@ import {
 
 interface ProductCardProps {
   product: Product;
-  messageRef: Ref;
+  messageRef: any;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({product, messageRef}) => {
@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({product, messageRef}) => {
         messageRef.current(`Ops! Something went wrong.`);
       });
     // Updating Users Points
-    setAuthContext({isAuth, auth: {...auth, points: auth.points - product.cost}});
+    setAuthContext({isAuth, auth: {...auth, points: auth?.points - product.cost}});
   };
 
   const canNotBuy = auth?.points < product.cost;
@@ -48,7 +48,7 @@ const ProductCard: React.FC<ProductCardProps> = ({product, messageRef}) => {
         {canNotBuy && (
           <BackDrop>
             <img alt="Coin Icon" src={CoinIcon} />
-            <Span>You need {product.cost - auth.points} more coins</Span>
+            <Span>You need {product.cost - auth?.points} more coins</Span>
           </BackDrop>
         )}
         <img alt={product.name} src={product.img.hdUrl} />

@@ -9,6 +9,10 @@ export const PaginationWrapper = styled.div`
   }
 `;
 
-export const Img = styled.img`
+interface ImgProps {
+  active: boolean;
+}
+
+export const Img = styled.img<ImgProps>`
   cursor: ${(props) => (props.active ? "pointer" : "initial")};
 `;

@@ -10,11 +10,11 @@ export interface Product {
 }
 
 export interface User {
-  id: string;
-  name: string;
-  points: number;
-  redeemHistory: [];
-  createDate: string;
+  id?: string;
+  name?: string;
+  points?: any;
+  redeemHistory?: [];
+  createDate?: string;
 }
 
 export interface History {
@@ -23,9 +23,4 @@ export interface History {
   cost: number;
   category: string;
   createDate: string;
-}
-
-export interface Notification {
-  key: number;
-  msg: string;
 }

@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 import {Main} from "./Layout.styles";
 
-const Layout = ({children}) => {
+const Layout = ({children}: any) => {
   return (
     <>
       <Header />

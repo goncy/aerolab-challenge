@@ -12,7 +12,7 @@ axios.defaults.headers = {
 export default {
   logInUser: (): Promise<{data: User}> =>
     axios.get("https://coding-challenge-api.aerolab.co/user/me"),
-  getAllProducts: (): Promise<{data: Product}> =>
+  getAllProducts: (): Promise<{data: Product[]}> =>
     axios.get("https://coding-challenge-api.aerolab.co/products"),
   getHistory: (): Promise<{data: History[]}> =>
     axios.get("https://coding-challenge-api.aerolab.co/user/history"),

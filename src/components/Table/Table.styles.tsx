@@ -53,7 +53,12 @@ export const Row = styled.div`
   grid-gap: 4px;
 `;
 
-export const Cell = styled.div`
+interface CellProps {
+  gold?: boolean;
+  gray?: boolean;
+}
+
+export const Cell = styled.div<CellProps>`
   padding: 1rem;
   width: 1fr;
   height: 100%;

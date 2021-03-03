@@ -7,4 +7,6 @@ export interface AuthContextShape {
   auth: User | null;
 }
 
-export const AuthContext = React.createContext([]);
+export const AuthContext = React.createContext<
+  [AuthContextShape, React.Dispatch<React.SetStateAction<AuthContextShape>>]
+>([{isAuth: false, auth: null}, () => null]);

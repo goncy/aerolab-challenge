@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {StyledFunction} from "styled-components";
 import {Link} from "react-router-dom";
 
 export const HeaderWrapper = styled.header`
@@ -54,7 +54,10 @@ export const LogIn = styled(Link)`
   }
 `;
 
-export const FullName = styled.span`
+interface FullNameProps {
+  loaded?: boolean;
+}
+export const FullName = styled.span<FullNameProps>`
   text-decoration: none;
   color: var(--black);
   font-size: 1rem;
@@ -63,3 +66,7 @@ export const FullName = styled.span`
   opacity: ${(props) => (props.loaded ? "1" : "0")};
   transition: all 1.8s ease;
 `;
+
+// styled<Props, 'div'>('div')`
+//   color: ${color.primary}
+// `

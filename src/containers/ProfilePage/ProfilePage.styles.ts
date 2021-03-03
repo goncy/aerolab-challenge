@@ -86,7 +86,13 @@ export const PointsCards = styled.div`
   grid-gap: 20px;
 `;
 
-export const PointsCard = styled.div`
+interface PointsCardsTypes {
+  type1?: boolean;
+  type2?: boolean;
+  type3?: boolean;
+}
+
+export const PointsCard = styled.div<PointsCardsTypes>`
   background: var(--black);
   height: 200px;
   border-radius: 6px;

@@ -2,7 +2,13 @@ import React from "react";
 
 import {SelectWrapper, Option, Label} from "./Select.styles";
 
-const Select = ({options, orderBy, setOrderBy}) => {
+interface SelectProps {
+  options: {value: string; name: string}[];
+  orderBy: string;
+  setOrderBy: any;
+}
+
+const Select: React.FC<SelectProps> = ({options, orderBy, setOrderBy}) => {
   return (
     <SelectWrapper>
       <Label>Sort by:</Label>
