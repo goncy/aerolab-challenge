@@ -7,8 +7,18 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@testing-library/react": "^11.2.5",
+    "@types/mocha": "^8.2.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",

@@ -1,19 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow-left</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Catalog-p2" transform="translate(-1200.000000, -512.000000)">
-            <g id="menu" transform="translate(132.000000, 512.000000)">
-                <g id="arrow-left" transform="translate(1068.000000, 0.000000)">
-                    <g id="Group-15">
-                        <circle id="Oval-4" stroke="#D9D9D9" cx="24" cy="24" r="23.5"></circle>
-                        <polygon id="Shape" fill="#D9D9D9" transform="translate(24.000000, 23.705000) rotate(-270.000000) translate(-24.000000, -23.705000) " points="28.59 20 24 24.58 19.41 20 18 21.41 24 27.41 30 21.41"></polygon>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M20 39.5834C30.8156 39.5834 39.5833 30.8156 39.5833 20C39.5833 9.18444 30.8156 0.416687 20 0.416687C9.18441 0.416687 0.416656 9.18444 0.416656 20C0.416656 30.8156 9.18441 39.5834 20 39.5834Z" stroke="#D9D9D9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.0875 23.5792L19.2708 19.7542L23.0875 15.9292L21.9125 14.7542L16.9125 19.7542L21.9125 24.7542L23.0875 23.5792Z" fill="#D9D9D9"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
 </svg>
