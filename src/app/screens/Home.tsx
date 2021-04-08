@@ -1,5 +1,5 @@
-import {CircularProgress, Flex, Heading, Stack} from "@chakra-ui/react";
-import React from "react";
+import {CircularProgress, Flex, Text, Heading, Stack} from "@chakra-ui/react";
+import * as React from "react";
 
 import api from "~/product/api";
 import {Product} from "~/product/types";
@@ -11,11 +11,27 @@ const HomeScreen: React.FC = () => {
   const [status, setStatus] = React.useState<"pending" | "resolved" | "rejected">("pending");
 
   React.useEffect(() => {
-    api.list().then((products) => {
-      setProducts(products);
-      setStatus("resolved");
-    });
+    api
+      .list()
+      .then((products) => {
+        setProducts(products);
+        setStatus("resolved");
+      })
+      .catch(() => {
+        setProducts([]);
+        setStatus("rejected");
+      });
   }, []);
+
+  if (status === "rejected") {
+    return (
+      <Flex alignItems="center" justifyContent="center" paddingY={12}>
+        <Text backgroundColor="primary.100" borderRadius="md" color="primary.700" padding={4}>
+          Press F to pay respect
+        </Text>
+      </Flex>
+    );
+  }
 
   if (status === "pending") {
     return (

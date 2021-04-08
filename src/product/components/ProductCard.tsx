@@ -1,9 +1,9 @@
-import React from "react";
+import * as React from "react";
 import {Box, Stack, Text, Image, Center, Divider, Button} from "@chakra-ui/react";
 
 import {Product} from "../types";
-import coin from "~/assets/icons/coin.svg";
-import {usePoints, useRedeem} from "~/user/hooks";
+import coin from "../../assets/icons/coin.svg";
+import {usePoints, useRedeem} from "../../user/hooks";
 
 interface Props {
   product: Product;
@@ -15,10 +15,17 @@ const ProductCard: React.FC<Props> = ({product}) => {
   const canBuy = product.cost <= points;
 
   return (
-    <Box backgroundColor="white" borderRadius="sm" boxShadow="md" padding={6} position="relative">
+    <Box
+      backgroundColor="white"
+      borderRadius="sm"
+      boxShadow="md"
+      data-testid="product"
+      padding={6}
+      position="relative"
+    >
       <Stack spacing={3}>
         <Stack direction="row" spacing={1}>
-          <Image src={coin} width={6} />
+          <Image alt="coin" src={coin} width={6} />
           <Text fontSize="sm" fontWeight="500">
             {product.cost}
           </Text>
@@ -37,6 +44,7 @@ const ProductCard: React.FC<Props> = ({product}) => {
           colorScheme="primary"
           fontSize="sm"
           isDisabled={!canBuy}
+          role="button"
           onClick={() => redeem(product)}
         >
           {canBuy ? `Redeem for ${product.cost}` : `Missing ${product.cost - points} points`}

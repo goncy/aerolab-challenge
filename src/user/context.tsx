@@ -1,11 +1,11 @@
-import React from "react";
+import * as React from "react";
 import {CircularProgress, Center} from "@chakra-ui/react";
-
-import productApi from "~/product/api";
-import {Product} from "~/product/types";
 
 import {User} from "./types";
 import api from "./api";
+
+import productApi from "~/product/api";
+import {Product} from "~/product/types";
 
 export interface Context {
   state: {

@@ -1,5 +1,5 @@
-import React from "react";
-import {Box, Stack, Grid} from "@chakra-ui/react";
+import * as React from "react";
+import {Box, Stack, Grid, Text} from "@chakra-ui/react";
 
 import {Product} from "../types";
 
@@ -55,11 +55,17 @@ const ProductsList: React.FC<Props> = ({products}) => {
           </Box>
         ))}
       </Stack>
-      <Grid gap={6} templateColumns="repeat(auto-fill, minmax(256px, 1fr))" width="100%">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
-      </Grid>
+      {Boolean(filteredProducts.length) ? (
+        <Grid gap={6} templateColumns="repeat(auto-fill, minmax(256px, 1fr))" width="100%">
+          {filteredProducts.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </Grid>
+      ) : (
+        <Text backgroundColor="primary.100" borderRadius="md" color="primary.700" padding={4}>
+          No hay productos
+        </Text>
+      )}
     </Stack>
   );
 };

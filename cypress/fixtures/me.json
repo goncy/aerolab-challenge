@@ -1,0 +1,717 @@
+{
+  "_id": "6029620f7e71870020e38ef5",
+  "name": "John Kite",
+  "points": 3200,
+  "createDate": "2021-02-14T17:46:55.229Z",
+  "redeemHistory": [
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-14T23:06:42.437Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/iPhone8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/iPhone8-x2.png"
+      },
+      "createDate": "2021-02-14T23:06:44.723Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "iPhone 8",
+      "cost": 800,
+      "category": "Phones",
+      "productId": "5a0b35c1734d1d08bf7084c3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+      },
+      "createDate": "2021-02-14T23:20:31.153Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Alienware 13",
+      "cost": 1500,
+      "category": "Laptops",
+      "productId": "5a0b36b3734d1d08bf70856f"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/iPhone8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/iPhone8-x2.png"
+      },
+      "createDate": "2021-02-14T23:35:33.420Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "iPhone 8",
+      "cost": 800,
+      "category": "Phones",
+      "productId": "5a0b35c1734d1d08bf7084c3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-15T01:54:39.909Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/iPhone8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/iPhone8-x2.png"
+      },
+      "createDate": "2021-02-15T13:15:13.333Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "iPhone 8",
+      "cost": 800,
+      "category": "Phones",
+      "productId": "5a0b35c1734d1d08bf7084c3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-15T13:15:36.002Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/iPhone8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/iPhone8-x2.png"
+      },
+      "createDate": "2021-02-15T13:16:05.479Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "iPhone 8",
+      "cost": 800,
+      "category": "Phones",
+      "productId": "5a0b35c1734d1d08bf7084c3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x2.png"
+      },
+      "createDate": "2021-02-15T13:16:40.455Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Instax Mini 8",
+      "cost": 80,
+      "category": "Cameras",
+      "productId": "5a0b35e8734d1d08bf7084cf"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:16:48.376Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-15T13:16:53.833Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:17.665Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:18.811Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:19.547Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:20.183Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:20.840Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:21.467Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:22.126Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:22.939Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:23.384Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:24.141Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:24.959Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:25.700Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:26.702Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:27.430Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-15T13:21:28.316Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Dell-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Dell-x2.png"
+      },
+      "createDate": "2021-02-15T13:30:48.779Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Dell UP3218k",
+      "cost": 900,
+      "category": "Monitors & TV",
+      "productId": "5a0b3609734d1d08bf7084e6"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-15T13:38:58.495Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/iPhone8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/iPhone8-x2.png"
+      },
+      "createDate": "2021-02-15T13:39:04.502Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "iPhone 8",
+      "cost": 800,
+      "category": "Phones",
+      "productId": "5a0b35c1734d1d08bf7084c3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Dell-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Dell-x2.png"
+      },
+      "createDate": "2021-02-15T13:47:12.819Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Dell UP3218k",
+      "cost": 900,
+      "category": "Monitors & TV",
+      "productId": "5a0b3609734d1d08bf7084e6"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Dell-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Dell-x2.png"
+      },
+      "createDate": "2021-02-15T13:47:15.919Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Dell UP3218k",
+      "cost": 900,
+      "category": "Monitors & TV",
+      "productId": "5a0b3609734d1d08bf7084e6"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+      },
+      "createDate": "2021-02-15T19:52:17.154Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Alienware 13",
+      "cost": 1500,
+      "category": "Laptops",
+      "productId": "5a0b36b3734d1d08bf70856f"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/SamsungS8-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/SamsungS8-x2.png"
+      },
+      "createDate": "2021-02-15T19:59:46.476Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Samsung S8",
+      "cost": 510,
+      "category": "Phones",
+      "productId": "5a0b3637734d1d08bf7084fb"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x2.png"
+      },
+      "createDate": "2021-02-22T02:34:39.807Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Instax Mini 8",
+      "cost": 80,
+      "category": "Cameras",
+      "productId": "5a0b35e8734d1d08bf7084cf"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-22T02:36:57.443Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-22T02:37:36.346Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-22T02:41:02.787Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/InstaxMini-x2.png"
+      },
+      "createDate": "2021-02-22T02:41:21.615Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Instax Mini 8",
+      "cost": 80,
+      "category": "Cameras",
+      "productId": "5a0b35e8734d1d08bf7084cf"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:51.607Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:54.715Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:54.902Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:55.087Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:55.272Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:55.445Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:55.517Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:09:56.088Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Switch-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Switch-x2.png"
+      },
+      "createDate": "2021-02-23T19:18:35.940Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Nintendo Switch 32GB",
+      "cost": 300,
+      "category": "Gaming",
+      "productId": "5a0b35d7734d1d08bf7084c9"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/AmazonEchoDot-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/AmazonEchoDot-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:38.778Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Amazon Echo Dot",
+      "cost": 50,
+      "category": "Smart Home",
+      "productId": "5a0b3620734d1d08bf7084f0"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/AmazonEchoDot-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/AmazonEchoDot-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:40.878Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Amazon Echo Dot",
+      "cost": 50,
+      "category": "Smart Home",
+      "productId": "5a0b3620734d1d08bf7084f0"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerNaga-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerNaga-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:47.259Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Naga Chroma",
+      "cost": 50,
+      "category": "PC Accessories",
+      "productId": "5a0b364f734d1d08bf708506"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:53.022Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:58.645Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T02:46:59.819Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/Alienware13-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/Alienware13-x2.png"
+      },
+      "createDate": "2021-02-24T02:48:06.353Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Alienware 13",
+      "cost": 1500,
+      "category": "Laptops",
+      "productId": "5a0b36b3734d1d08bf70856f"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/MarshallMajorll-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/MarshallMajorll-x2.png"
+      },
+      "createDate": "2021-02-24T02:48:12.648Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Marshall Major ll",
+      "cost": 300,
+      "category": "Audio",
+      "productId": "5a0b35f0734d1d08bf7084df"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T22:32:44.357Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T22:32:45.483Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/RazerBladePro-x2.png"
+      },
+      "createDate": "2021-02-24T22:32:46.464Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Razer Blade Pro",
+      "cost": 2500,
+      "category": "Laptops",
+      "productId": "5a0b35f8734d1d08bf7084e3"
+    },
+    {
+      "img": {
+        "url": "https://coding-challenge-api.aerolab.co/images/MacbookPro-x1.png",
+        "hdUrl": "https://coding-challenge-api.aerolab.co/images/MacbookPro-x2.png"
+      },
+      "createDate": "2021-02-24T22:33:00.643Z",
+      "_id": "60071bd47e71870020e38ede",
+      "name": "Macbook Pro",
+      "cost": 1300,
+      "category": "Laptops",
+      "productId": "5a0b35df734d1d08bf7084cb"
+    }
+  ],
+  "__v": 0
+}

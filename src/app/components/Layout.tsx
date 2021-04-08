@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import {Box, Center, Container, Flex, Stack, Image, Text} from "@chakra-ui/react";
 
 import coin from "~/assets/icons/coin.svg";
@@ -33,7 +33,9 @@ const Layout: React.FC = ({children}) => {
                 paddingY={2}
                 onClick={() => addPoints(1000)}
               >
-                <Text fontWeight="500">{points}</Text>
+                <Text data-testid="points" fontWeight="500">
+                  {points}
+                </Text>
                 <Image height={6} src={coin} width={6} />
               </Stack>
             </Stack>
