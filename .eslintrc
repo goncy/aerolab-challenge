@@ -7,9 +7,11 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react"
   ],
-  "plugins": ["react", "prettier", "import", "@typescript-eslint"],
+  "plugins": ["react", "prettier", "import", "@typescript-eslint", "jest-dom", "testing-library"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
