@@ -10,7 +10,7 @@ Podés encontrar la documentación [acá](https://aerolabchallenge.docs.apiary.i
 El usuario tiene una cantidad definida de puntos y cada producto vale una cantidad de puntos especifica.
 
 * Cada producto debe tener un precio en puntos de manera visible.
-* El usuario debería poder filtrar los productos por precio, de mayor a menor y vicecersa.
+* El usuario debería poder filtrar los productos por precio, de mayor a menor y viceversa.
 * El usuario debería poder ver cuantos puntos tienen en su cuenta.
 * Debería haber una manera clara para el usuario de ver que productos puede comprar y cuales no.
 * El botón de comprar debería estar disponible en los productos que el usuario tiene suficientes puntos para comprar.
