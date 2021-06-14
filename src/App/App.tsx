@@ -11,7 +11,7 @@ const App: React.FC = () => {
         <h1>
           <img alt="Aerolab" src={logo} width={128} />
         </h1>
-        <h3>Lets get this party started</h3>
+        <h3>Let's get this party started</h3>
       </header>
     </main>
   );
